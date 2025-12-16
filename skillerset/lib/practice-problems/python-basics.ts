@@ -561,8 +561,8 @@ print('RECEIPT')
 print('-' * 20)
 print(f'Item: {item_name}')
 print(f'Quantity: {quantity}')
-print(f'Price per item: ${price_per_item:.2f}')
-print(f'Total: ${total:.2f}')
+print(f'Price per item: {chr(36)}{price_per_item:.2f}')
+print(f'Total: {chr(36)}{total:.2f}')
 print('-' * 20)`,
     explanation: 'Get item details from user, calculate total, and display a formatted receipt with proper alignment, currency formatting, and visual separators.',
     timeComplexity: 'O(1)',

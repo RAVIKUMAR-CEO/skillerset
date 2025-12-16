@@ -1,7 +1,7 @@
 'use client';
 
+import React, { useState } from 'react';
 import { Tutorial, TutorialSection, CodeExample, Callout, VisualAid } from '@/lib/tutorials';
-import { useState } from 'react';
 
 interface TutorialContentProps {
   tutorial: Tutorial;
@@ -13,7 +13,7 @@ export default function TutorialContent({ tutorial }: TutorialContentProps) {
   const renderSection = (section: TutorialSection, index: number) => {
     switch (section.type) {
       case 'heading':
-        const HeadingTag = `h${section.level || 2}` as keyof JSX.IntrinsicElements;
+        const HeadingTag = `h${section.level || 2}` as any;
         return (
           <HeadingTag
             key={index}
